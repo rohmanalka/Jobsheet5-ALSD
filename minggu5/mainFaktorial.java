@@ -15,17 +15,27 @@ public class mainFaktorial {
             fk[i].nilai = sc.nextInt();
         }
 
+        long startTimeBF = System.currentTimeMillis();
         System.out.println("========================================================");
         System.out.println("Hasil faktorial dengan Brute Force ");
         for (int i = 0; i < elemen; i++) {
             System.out.println("Faktorial dari nilai " + fk[i].nilai + " adalah : " + fk[i].faktorialBF(fk[i].nilai));
         }
+        long endTimeBF = System.currentTimeMillis();
+        double executionTimeBF = (endTimeBF - startTimeBF) / 1000.0;
+        System.out.println("Waktu eksekusi Brute Force: " + executionTimeBF + " detik");
 
+        // Pengukuran waktu untuk faktorial dengan Divide and Conquer
+        long startTimeDC = System.currentTimeMillis();
         System.out.println("========================================================");
         System.out.println("Hasil faktorial dengan Divide and Conquer ");
         for (int i = 0; i < elemen; i++) {
             System.out.println("Faktorial dari nilai " + fk[i].nilai + " adalah : " + fk[i].faktorialDC(fk[i].nilai));
         }
+        long endTimeDC = System.currentTimeMillis();
+        double executionTimeDC = (endTimeDC - startTimeDC) / 1000.0;
+        System.out.println("Waktu eksekusi Divide and Conquer: " + executionTimeDC + " detik");
+
         System.out.println("========================================================");
     }
 }

@@ -3,10 +3,15 @@ package minggu5;
 public class pangkat {
     public int nilai, pangkat;
 
+    public pangkat(int nilai, int pangkat) {
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
+
     public int pangkatBF(int a, int n) {
         int hasil = 1;
         for (int i = 0; i < n; i++) {
-            hasil = hasil * a;
+            hasil = hasil * a;  
         }
         return hasil;
     }
